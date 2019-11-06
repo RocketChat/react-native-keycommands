@@ -10,7 +10,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 import { NativeModules, StyleSheet, requireNativeComponent, Platform, View } from 'react-native';
 import React from 'react';
 const { KeyCommandConstants } = NativeModules;
-const KeyCommands = requireNativeComponent('KeyCommands');
+const RCTKeyCommands = requireNativeComponent('RCTKeyCommands');
 const defaultStyles = StyleSheet.create({
   main: {
       backgroundColor: 'transparent'
@@ -40,6 +40,6 @@ export default class KeyCommands extends React.Component {
             />
           );
       }
-      return (<KeyCommands {...Object.assign({}, props, { style: [defaultStyles.main, style] })}/>);
+      return (<RCTKeyCommands {...Object.assign({}, props, { style: [defaultStyles.main, style] })}/>);
   }
 }
