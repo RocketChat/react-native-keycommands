@@ -1,6 +1,7 @@
-#import <React/RCTViewManager.h>
 #import <Foundation/Foundation.h>
+#import <React/RCTBridgeModule.h>
+#import <React/RCTEventEmitter.h>
 
-@interface RCTKeyCommandsManager : RCTViewManager
+@interface RCTKeyCommandsManager : RCTEventEmitter <RCTBridgeModule>
 
 @end
