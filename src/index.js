@@ -1,4 +1,4 @@
-import { NativeModules } from 'react-native';
+import { NativeModules, NativeEventEmitter } from 'react-native';
 
 const { KeyCommandConstants, KeyCommandsManager } = NativeModules;
 export const constants = {
@@ -13,5 +13,7 @@ export const constants = {
   keyInputRightArrow: KeyCommandConstants.keyInputRightArrow,
   keyInputEscape: KeyCommandConstants.keyInputEscape,
 };
+
+export const KeyCommandsEmitter = new NativeEventEmitter(KeyCommandsManager);
 
 export default KeyCommandsManager;
