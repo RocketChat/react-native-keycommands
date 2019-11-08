@@ -22,5 +22,5 @@ export const KeyCommandsEmitter = !isAndroid ? new NativeEventEmitter(KeyCommand
 
 export default !isAndroid ? KeyCommandsManager : {
   setKeyCommands: () => {},
-  removeKeyCommands: () => {}
+  deleteKeyCommands: () => {}
 };
