@@ -31,13 +31,10 @@ RCT_EXPORT_METHOD(setKeyCommands:(NSArray *)json
             flags = @0;
         }
         dispatch_async(dispatch_get_main_queue(), ^{
-            [[RCTKeyCommands sharedInstance]
-                registerKeyCommand:input
-                modifierFlags:[flags integerValue]
-                discoverabilityTitle:discoverabilityTitle
-                action:^(__unused UIKeyCommand *command) {
-                    [self onKeyCommand:command];
-                }];
+        [[RCTKeyCommands sharedInstance]
+             registerKeyCommandWithInput:input modifierFlags:[flags integerValue] action:^(__unused UIKeyCommand *command) {
+                [self onKeyCommand:command];
+            }];
         });
     }
 
