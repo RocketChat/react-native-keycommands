@@ -17,6 +17,8 @@ export interface KeyCommand {
   input: string;
   keyModifier?: number;
   discoverabilityTitle?: string;
+  setKeyCommands({}): any
+  deleteKeyCommands({}): any
 }
 export interface Props {
   style?: ViewStyle;
@@ -24,6 +26,11 @@ export interface Props {
   onKeyCommand?: (event: NativeSyntheticEvent<KeyCommand>) => void;
   testID?: string;
 }
+
+export declare const KeyCommandsEmitter: {
+  addListener: (command: string, callback: (any)) => {}
+};
+
 export default class KeyCommands extends React.Component<Props> {
   render(): JSX.Element;
 }
